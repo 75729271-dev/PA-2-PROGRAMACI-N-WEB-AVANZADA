@@ -18,13 +18,8 @@
 
 | N° | Nombre completo | Rol en el equipo | Participación |
 |---|---|---|---|
-| 1 | Ángel Fernando Reyes Moreno | Backend: autenticación y seguridad | JWT, bcrypt, middleware de roles, CORS |
-| 2 | [Nombre completo] | Backend: modelos y persistencia | Conexión MongoDB, esquemas Mongoose, seed |
-| 3 | [Nombre completo] | Backend: rutas y controladores CRUD | Endpoints de solicitudes y usuarios |
-| 4 | [Nombre completo] | Pruebas y documentación | Pruebas automatizadas, colección Postman, README |
-| 5 | [Opcional] | | |
-
-> Ajustar roles y participación según lo que realmente hizo cada integrante.
+| 1 | Ángel Fernando Reyes Moreno | Backend: persistencia, seguridad y documentación | Conexión con MongoDB y modelos Mongoose, JWT, bcrypt, middleware de roles, CORS, pruebas automatizadas y README |
+| 2 | Franco Andrés Díaz Garreal | Backend: servidor Express y CRUD | Servidor base con Express, rutas y primera versión del CRUD de solicitudes, integración del repositorio del equipo |
 
 ## 2. Descripción
 
