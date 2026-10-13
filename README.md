@@ -203,14 +203,27 @@ Usan la base `MONGO_URI_TEST` (por defecto `mongodb://127.0.0.1:27017/solicitude
 
 - **Pruebas automatizadas:** `tests/api.test.js` cubre servidor y middleware, registro y login, cifrado bcrypt, rutas protegidas, CRUD completo con verificación directa en MongoDB, restricciones por rol y gestión de usuarios. El resultado de cada ejecución se ve en la pestaña Actions.
 - **Colección Postman:** `docs/PA2-Solicitudes.postman_collection.json`.
-- **Capturas** (agregar en `docs/evidencias/`):
-  - [ ] Consola con `MongoDB conectado` y `Servidor ejecutándose`
-  - [ ] Login que devuelve el token
-  - [ ] POST, GET, PUT, PATCH y DELETE de solicitudes en Postman
-  - [ ] Petición sin token (401) y estudiante intentando cambiar estado (403)
-  - [ ] Colecciones `usuarios` y `solicitudes` en MongoDB Compass mostrando las contraseñas cifradas
-  - [ ] Datos que siguen ahí después de reiniciar el servidor (persistencia)
-  - [ ] Resultado de `npm test`
+- **Ejecución real contra MongoDB local** (servidor en `localhost:3000`, base `solicitudes_academicas`, 20 peticiones en orden, 13/10/2026):
+
+  **1. Servidor, registro con rol forzado a estudiante y login (JWT)**
+  ![Servidor, registro y login](docs/evidencias/01-servidor-registro-login.jpg)
+
+  **2. Contraseña incorrecta (401), perfil protegido, acceso sin token (401) y creación de solicitud**
+  ![Rechazos 401, perfil y CREATE](docs/evidencias/02-rechazo-401-perfil-crear.jpg)
+
+  **3. Segunda solicitud, validación de Mongoose (400), listado y detalle con populate**
+  ![CREATE, validación y READ](docs/evidencias/03-crear-validacion-listar.jpg)
+
+  **4. Edición por el dueño, estudiante sin permiso para cambiar estado (403), aprobación del administrativo y filtro por estado**
+  ![UPDATE y roles](docs/evidencias/04-editar-403-aprobar-filtrar.jpg)
+
+  **5. Gestión de usuarios solo para administrativo (403 / 200 sin contraseñas), eliminación y verificación (404)**
+  ![Usuarios y DELETE](docs/evidencias/05-usuarios-eliminar-404.jpg)
+
+  **6. Pruebas automatizadas en GitHub Actions con MongoDB: 30 de 30 aprobadas**
+  ![Resultado de las pruebas](docs/evidencias/06-pruebas-github-actions.jpg)
+
+- **Pendiente de agregar:** captura de MongoDB Compass con las colecciones `usuarios` (contraseñas cifradas con bcrypt) y `solicitudes`.
 
 ## 8. Conclusiones
 
