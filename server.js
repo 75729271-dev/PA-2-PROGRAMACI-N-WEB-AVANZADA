@@ -1,27 +1,23 @@
-
-const express = require('express');
-const cors = require('cors');
 require('dotenv').config();
 
-const app = express();
-const solicitudesRoutes = require('./routes/solicitudes');
+const app = require('./src/app');
+const { conectarDB } = require('./src/config/db');
+
 const PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(cors());
-app.use(express.json());
+if (!process.env.JWT_SECRET) {
+    console.error('Falta la variable de entorno JWT_SECRET. Revisa el archivo .env');
+    process.exit(1);
+}
 
-// Rutas del CRUD
-app.use('/api/solicitudes', solicitudesRoutes);
-
-// Ruta principal
-app.get('/', (req, res) => {
-    res.json({
-        mensaje: 'API de Solicitudes Académicas funcionando correctamente'
+// Primero se conecta a MongoDB y recién después se levanta el servidor
+conectarDB()
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
+        });
+    })
+    .catch(error => {
+        console.error('No se pudo conectar a MongoDB:', error.message);
+        process.exit(1);
     });
-});
-
-// Iniciar servidor
-app.listen(PORT, () => {
-    console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
-});

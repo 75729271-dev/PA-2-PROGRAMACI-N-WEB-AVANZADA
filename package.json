@@ -1,22 +1,31 @@
 {
   "name": "pa2_backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "API REST de la Plataforma de Gestión de Solicitudes Académicas (PA2 Programación Web II, ISIL)",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "seed": "node scripts/seed.js",
+    "test": "node --test --test-concurrency=1 tests/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^18.0.7",
-    "express": "^5.3.0"
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "supertest": "^7.3.1"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
