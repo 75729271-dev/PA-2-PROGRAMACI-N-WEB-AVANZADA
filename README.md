@@ -8,6 +8,10 @@
 | Curso | Programación Web II (código 30690) |
 | Evaluación | PA2, Proceso de Aprendizaje 2 (sesiones 5 a 7) |
 | Periodo | 202620 |
+| Ponderación | 15% |
+| Docente | [COMPLETAR] |
+| Sección | [COMPLETAR] |
+| Fecha de entrega | [COMPLETAR] |
 | Tecnologías | Node.js, Express 5, MongoDB, Mongoose, JWT, bcrypt.js, CORS |
 
 **Video público de YouTube:** [PEGAR AQUÍ EL ENLACE]
@@ -230,6 +234,21 @@ Usan la base `MONGO_URI_TEST` (por defecto `mongodb://127.0.0.1:27017/solicitude
 4. La autorización por roles no basta con ocultar botones en el frontend: el backend debe impedir que un estudiante cambie estados o vea solicitudes ajenas, y que alguien se registre como administrativo.
 5. Las pruebas automatizadas con una base de datos real dan evidencia verificable de que el CRUD, la persistencia y la seguridad funcionan, y detectan errores antes de exponer.
 
-## 9. Seguridad del repositorio
+## 9. Video de exposición
+
+**Video público de YouTube:** [PEGAR AQUÍ EL ENLACE]
+
+Participan los tres integrantes con cámara prendida. Estructura de la exposición (8 a 12 minutos):
+
+| Bloque | Responsable | Contenido |
+|---|---|---|
+| 1. Problema y caso | Franco Andrés Díaz Garreal | Caso progresivo, por qué el frontend necesita una API y qué entidades maneja |
+| 2. Servidor, rutas, middleware y CRUD | Franco Andrés Díaz Garreal | Recorrido por `server.js`, `src/app.js`, rutas y controladores; CRUD en vivo |
+| 3. MongoDB y Mongoose | Ángel Fernando Reyes Moreno | Conexión, modelos `Usuario` y `Solicitud`, validaciones, `populate`; persistencia mostrada en Compass tras reiniciar el servidor |
+| 4. Seguridad | Ángel Fernando Reyes Moreno | Registro y login con bcrypt y JWT, `verificarToken`, `autorizarRoles`, CORS |
+| 5. Pruebas y evidencias | Rodrigo Adrián Salas Sandoval | Colección Postman (casos 200, 401, 403, 404), pruebas automatizadas y GitHub Actions |
+| 6. Decisiones y conclusiones | Los tres | Relación con las sesiones 5 a 7 y conclusiones del equipo |
+
+## 10. Seguridad del repositorio
 
 El archivo `.env` está en `.gitignore`. El repositorio solo incluye `.env.example` con valores de ejemplo; no se publican contraseñas, tokens ni cadenas de conexión reales.
