@@ -223,7 +223,8 @@ Usan la base `MONGO_URI_TEST` (por defecto `mongodb://127.0.0.1:27017/solicitude
   **6. Pruebas automatizadas en GitHub Actions con MongoDB: 30 de 30 aprobadas**
   ![Resultado de las pruebas](docs/evidencias/06-pruebas-github-actions.jpg)
 
-- **Pendiente de agregar:** captura de MongoDB Compass con las colecciones `usuarios` (contraseñas cifradas con bcrypt) y `solicitudes`.
+  **7. MongoDB Compass: colección `usuarios` persistida en la base `solicitudes_academicas`, con las contraseñas guardadas como hash bcrypt (`$2b$10$...`)**
+  ![Compass usuarios](docs/evidencias/07-compass-usuarios-bcrypt.png)
 
 ## 8. Conclusiones
 
