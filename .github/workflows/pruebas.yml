@@ -15,13 +15,19 @@ jobs:
           - 27017:27017
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm test
+      - name: Ejecutar pruebas
+        run: npm test 2>&1 | tee resultado-pruebas.txt
         env:
           MONGO_URI_TEST: mongodb://127.0.0.1:27017/solicitudes_academicas_test
           JWT_SECRET: clave_solo_para_ci
+      - name: Mostrar pruebas fallidas
+        if: failure()
+        run: |
+          msg=$(grep -A20 "not ok" resultado-pruebas.txt | head -150 | sed ':a;N;$!ba;s/%/%25/g;s/\n/%0A/g')
+          echo "::error title=Pruebas fallidas::$msg"

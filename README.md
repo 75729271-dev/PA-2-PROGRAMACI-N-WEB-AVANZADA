@@ -156,7 +156,7 @@ Códigos de respuesta usados: `200`, `201`, `400` (validación o id inválido), 
 
 ### Requisitos
 
-- Node.js 18 o superior
+- Node.js 20 o superior
 - MongoDB local (Community Server o Docker) o un cluster gratuito de MongoDB Atlas
 
 ### Pasos
