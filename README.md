@@ -14,7 +14,7 @@
 | Fecha de entrega | 13/10/2026 |
 | Tecnologías | Node.js, Express 5, MongoDB, Mongoose, JWT, bcrypt.js, CORS |
 
-**Video público de YouTube:** [PEGAR AQUÍ EL ENLACE]
+**Video público de YouTube:** https://www.youtube.com/watch?v=NixMXA0wH7o&t=111s
 
 ---
 
