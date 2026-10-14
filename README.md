@@ -23,7 +23,7 @@
 | N° | Nombre completo | Rol en el equipo | Participación |
 |---|---|---|---|
 | 1 | Ángel Fernando Reyes Moreno | Backend: persistencia y seguridad | Conexión con MongoDB y modelos Mongoose, JWT, bcrypt, middleware de roles y CORS |
-| 2 | Franco Andrés Díaz Garreal | Backend: servidor Express y CRUD | Servidor base con Express, rutas y primera versión del CRUD de solicitudes, integración del repositorio del equipo |
+| 2 | Franco Andrés Díaz Carreal | Backend: servidor Express y CRUD | Servidor base con Express, rutas y primera versión del CRUD de solicitudes, integración del repositorio del equipo |
 | 3 | Rodrigo Adrián Salas Sandoval | Pruebas y documentación | Pruebas de los endpoints con Postman, evidencias de ejecución y README |
 
 ## 2. Descripción
@@ -242,8 +242,8 @@ Participan los tres integrantes con cámara prendida. Estructura de la exposici�
 
 | Bloque | Responsable | Contenido |
 |---|---|---|
-| 1. Problema y caso | Franco Andrés Díaz Garreal | Caso progresivo, por qué el frontend necesita una API y qué entidades maneja |
-| 2. Servidor, rutas, middleware y CRUD | Franco Andrés Díaz Garreal | Recorrido por `server.js`, `src/app.js`, rutas y controladores; CRUD en vivo |
+| 1. Problema y caso | Franco Andrés Díaz Carreal | Caso progresivo, por qué el frontend necesita una API y qué entidades maneja |
+| 2. Servidor, rutas, middleware y CRUD | Franco Andrés Díaz Carreal | Recorrido por `server.js`, `src/app.js`, rutas y controladores; CRUD en vivo |
 | 3. MongoDB y Mongoose | Ángel Fernando Reyes Moreno | Conexión, modelos `Usuario` y `Solicitud`, validaciones, `populate`; persistencia mostrada en Compass tras reiniciar el servidor |
 | 4. Seguridad | Ángel Fernando Reyes Moreno | Registro y login con bcrypt y JWT, `verificarToken`, `autorizarRoles`, CORS |
 | 5. Pruebas y evidencias | Rodrigo Adrián Salas Sandoval | Colección Postman (casos 200, 401, 403, 404), pruebas automatizadas y GitHub Actions |
