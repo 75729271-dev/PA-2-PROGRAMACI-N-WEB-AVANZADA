@@ -9,9 +9,9 @@
 | Evaluación | PA2, Proceso de Aprendizaje 2 (sesiones 5 a 7) |
 | Periodo | 202620 |
 | Ponderación | 15% |
-| Docente | [COMPLETAR] |
-| Sección | [COMPLETAR] |
-| Fecha de entrega | [COMPLETAR] |
+| Docente | WILDER JULIO ESPINOZA BRAVO |
+| Sección | 4060 |
+| Fecha de entrega | 13/10/2026 |
 | Tecnologías | Node.js, Express 5, MongoDB, Mongoose, JWT, bcrypt.js, CORS |
 
 **Video público de YouTube:** [PEGAR AQUÍ EL ENLACE]
@@ -115,7 +115,7 @@ erDiagram
     }
 ```
 
-Se eligió **referenciar** al usuario (y no incrustarlo) porque un estudiante tiene muchas solicitudes y sus datos pueden cambiar; con `populate()` se obtienen nombre, email y rol al consultar.
+Se eligió referenciar al usuario (y no incrustarlo) porque un estudiante tiene muchas solicitudes y sus datos pueden cambiar; con `populate()` se obtienen nombre, email y rol al consultar.
 
 ### 5.3 Endpoints
 
