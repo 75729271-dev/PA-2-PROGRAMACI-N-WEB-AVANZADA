@@ -236,7 +236,7 @@ Usan la base `MONGO_URI_TEST` (por defecto `mongodb://127.0.0.1:27017/solicitude
 
 ## 9. Video de exposición
 
-**Video público de YouTube:** [PEGAR AQUÍ EL ENLACE]
+**Video público de YouTube:** (https://www.youtube.com/watch?v=NixMXA0wH7o&t=111s)
 
 Participan los tres integrantes con cámara prendida. Estructura de la exposición (8 a 12 minutos):
 
